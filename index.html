@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link href="main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/easing/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenLite.min.js"></script>
+    <script>
+        var func = function() {
+            var container = document.getElementById("container");
+            container.innerHTML = "";
+            for (i = 0; i < 5000; i++) {
+                //setTimeout(function() {
+                    //for (f = 0; f < 500; f++) {
+                        var el = document.createElement("DIV")
+                        container.appendChild(el);
+                        //setTimeout(function() {
+                            TweenLite.to(el, 1, {
+                                backgroundColor: "#000"
+                            });
+                        //}, 0)
+
+                    //}
+                //}, 500)
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>
